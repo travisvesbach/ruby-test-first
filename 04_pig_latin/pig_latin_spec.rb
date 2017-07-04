@@ -68,5 +68,14 @@ describe "#translate" do
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
+  it "keeps capitalized words" do
+    s = translate("I like Jack Sparrow")
+    expect(s).to eq("Iay ikelay Ackjay Arrowspay")
+  end
+
+  it "keep punctuation" do
+    s = translate("Do you like the Packers?")
+    expect(s).to eq("Oday ouyay ikelay ethay Ackerspay?")
+  end
 
 end
